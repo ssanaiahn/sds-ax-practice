@@ -1,0 +1,3 @@
+import a
+
+print("내 __name__은:", __name__)

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-manual-react-20261104-144415\\candidate.json",
+    "sha256": "877a0e07521a3106b72d3b9ef44606dc5534a8cf7a962d237c343dd205c01da3",
+    "bytes": 3728
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-manual-react-20261104-144415\\manual-react.html",
+    "sha256": "e1fde7c1a74d6085bac2529dbb17f7b2d14217b44fde399e093885021c3da3a9",
+    "bytes": 850386
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-manual-react-20261104-144415\\manual-react.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-manual-react-20261104-144415\\manual-react.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-manual-react-20261104-144415\\manual-react.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-04T05:45:31.479Z",
+    "source": "network",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4208,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

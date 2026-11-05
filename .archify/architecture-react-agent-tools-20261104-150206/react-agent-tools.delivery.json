@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "ed703121-6196-4dde-a5db-75f6f0e2fa45",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\architecture-react-agent-tools-20261104-150206\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\architecture-react-agent-tools-20261104-150206\\react-agent-tools.html",
+  "specification": {
+    "sha256": "2444b0e8f6907e9b7b07b59a567e6cdb1542ce4e6edfb334c3e8a41437393683",
+    "bytes": 2815
+  },
+  "artifact": {
+    "sha256": "769a48539dd11dd566c10452ee44b30cbdaddd9c2240d5d3928730b1ee9d0e93",
+    "bytes": 844237
+  }
+}

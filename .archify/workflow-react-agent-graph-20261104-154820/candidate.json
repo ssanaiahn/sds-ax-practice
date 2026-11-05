@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "react_agent.py LangGraph ReAct 에이전트",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-react-agent-graph-20261104-154820/react-agent-graph.html"
+  },
+  "lanes": [
+    { "id": "flow", "label": "그래프 흐름" },
+    { "id": "state", "label": "State (AgentState)" },
+    { "id": "toolrun", "label": "도구 실행" }
+  ],
+  "phases": [
+    { "id": "reason", "label": "추론", "fromCol": 0, "toCol": 1, "variant": "emphasis" },
+    { "id": "route", "label": "라우팅", "fromCol": 2, "toCol": 2 },
+    { "id": "act", "label": "행동 · 관찰", "fromCol": 3, "toCol": 4, "variant": "dashed" }
+  ],
+  "mainPath": ["start", "agent", "decide", "toolnode", "tooldefs"],
+  "nodes": [
+    { "id": "start", "lane": "flow", "col": 0, "type": "external", "label": "START", "sublabel": "HumanMessage(질문)", "icon": "start" },
+    { "id": "agent", "lane": "flow", "col": 1, "type": "cloud", "label": "agent 노드", "sublabel": "SYSTEM_PROMPT + messages", "tag": "llm_with_tools.invoke" },
+    { "id": "decide", "lane": "flow", "col": 2, "type": "security", "label": "should_continue", "sublabel": "last.tool_calls 있나?", "icon": "decision" },
+    { "id": "finish", "lane": "flow", "col": 3, "type": "frontend", "label": "END", "sublabel": "최종 답변", "icon": "success" },
+    { "id": "history", "lane": "state", "col": 1, "type": "database", "label": "messages", "sublabel": "모든 메시지 누적", "tag": "add_messages" },
+    { "id": "toolnode", "lane": "toolrun", "col": 2, "type": "messagebus", "label": "ToolNode(tools)", "sublabel": "실행 + ToolMessage 포장" },
+    { "id": "tooldefs", "lane": "toolrun", "col": 3, "type": "backend", "label": "@tool 3개", "sublabel": "직원 조회 · 계산 · 부서 분류" },
+    { "id": "inner", "lane": "toolrun", "col": 4, "type": "cloud", "label": "도구 안의 llm", "sublabel": "classify_request만 호출", "tag": "IT지원·인사·총무" }
+  ],
+  "edges": [
+    { "id": "start-agent", "from": "start", "to": "agent", "label": "질문" },
+    { "id": "agent-decide", "from": "agent", "to": "decide", "label": "AIMessage", "variant": "emphasis" },
+    { "id": "decide-end", "from": "decide", "to": "finish", "label": "\"end\"", "role": "branch" },
+    { "id": "decide-tools", "from": "decide", "to": "toolnode", "label": "\"tools\"", "variant": "emphasis" },
+    { "id": "toolnode-defs", "from": "toolnode", "to": "tooldefs", "label": "tool_calls대로 호출" },
+    { "id": "defs-inner", "from": "tooldefs", "to": "inner", "label": "llm.invoke", "variant": "dashed" },
+    { "id": "toolnode-agent", "from": "toolnode", "to": "agent", "label": "Cycle: 재판단", "role": "return", "variant": "dashed" },
+    { "id": "agent-history", "from": "agent", "to": "history", "label": "응답 추가", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "manual_react.py와 대응",
+      "items": [
+        "messages 리스트 + append → State + add_messages",
+        "invoke와 append → agent 노드",
+        "if not tool_calls → should_continue",
+        "도구 실행 + ToolMessage → ToolNode, while → Cycle"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "@tool 3개",
+      "items": [
+        "search_employee: 이름 → 팀·이메일",
+        "calculate: 수식 → 결과",
+        "classify_request: 문의 → 담당 부서"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "3/3 동작 확인의 세 경로",
+      "items": [
+        "경로 1: 도구 없이 바로 END (자기소개)",
+        "경로 2: 도구 1개 → agent → END",
+        "경로 3: 도구 2개 이상을 이어서 호출 (분류 + 계산)"
+      ]
+    }
+  ]
+}

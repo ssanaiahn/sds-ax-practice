@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "react_agent.py (1/3) 도구 준비",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/architecture-react-agent-tools-20261104-150206/react-agent-tools.html"
+  },
+  "components": [
+    { "id": "toolset", "type": "messagebus", "label": "tools 리스트", "sublabel": "60행 · 에이전트에 넘길 목록", "pos": [40, 200], "size": [170, 64] },
+    { "id": "search", "type": "backend", "label": "search_employee", "sublabel": "이름 → 팀·이메일", "tag": "@tool", "pos": [320, 60], "size": [170, 64] },
+    { "id": "calc", "type": "backend", "label": "calculate", "sublabel": "수식 문자열 → 결과", "tag": "@tool", "pos": [320, 200], "size": [170, 64] },
+    { "id": "classify", "type": "backend", "label": "classify_request", "sublabel": "문의 → 담당 부서", "tag": "@tool", "pos": [320, 340], "size": [170, 64] },
+    { "id": "employees", "type": "database", "label": "employees", "sublabel": "김하늘 · 박도윤", "tag": "교육용 더미 데이터", "pos": [620, 60], "size": [170, 64] },
+    { "id": "evaluator", "type": "backend", "label": "eval()", "sublabel": "__builtins__ 차단", "pos": [620, 200], "size": [170, 64] },
+    { "id": "bedrock", "type": "cloud", "label": "ChatBedrockConverse", "sublabel": "Claude Sonnet 4.5", "tag": "도구 안의 AI", "pos": [620, 340], "size": [170, 64] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "AWS Bedrock · us-east-1", "wraps": ["bedrock"] }
+  ],
+  "connections": [
+    { "id": "set-search", "from": "toolset", "to": "search" },
+    { "id": "set-calc", "from": "toolset", "to": "calc" },
+    { "id": "set-classify", "from": "toolset", "to": "classify" },
+    { "id": "search-lookup", "from": "search", "to": "employees", "label": "dict 조회" },
+    { "id": "calc-eval", "from": "calc", "to": "evaluator", "label": "수식 계산" },
+    { "id": "classify-llm", "from": "classify", "to": "bedrock", "label": "llm.invoke", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "도구 3개의 공통점",
+      "items": [
+        "@tool의 docstring이 설명이 되어 모델에게 전달됨",
+        "입력은 문자열 하나, 결과도 문자열로 돌려줌"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "classify_request는 특별함",
+      "items": [
+        "도구 안에서 같은 llm을 한 번 더 호출함",
+        "IT지원 · 인사 · 총무 중 하나만 답하게 지시"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "아직 없는 부분 (2/3, 3/3)",
+      "items": [
+        "StateGraph · ToolNode · add_messages는 import만 됨",
+        "에이전트 그래프 연결은 다음 단계에서 작성"
+      ]
+    }
+  ]
+}

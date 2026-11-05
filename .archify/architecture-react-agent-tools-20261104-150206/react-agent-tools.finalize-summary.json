@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\architecture-react-agent-tools-20261104-150206\\candidate.json",
+    "sha256": "2444b0e8f6907e9b7b07b59a567e6cdb1542ce4e6edfb334c3e8a41437393683",
+    "bytes": 2815
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\architecture-react-agent-tools-20261104-150206\\react-agent-tools.html",
+    "sha256": "769a48539dd11dd566c10452ee44b30cbdaddd9c2240d5d3928730b1ee9d0e93",
+    "bytes": 844237
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\architecture-react-agent-tools-20261104-150206\\react-agent-tools.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\architecture-react-agent-tools-20261104-150206\\react-agent-tools.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\architecture-react-agent-tools-20261104-150206\\react-agent-tools.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-04T05:45:31.479Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4042,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

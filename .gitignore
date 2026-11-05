@@ -1,0 +1,6 @@
+.venv/
+.env
+__pycache__/
+# 별도 저장소로 관리하는 폴더
+sds-ax-training/
+sds-ax-practice/
