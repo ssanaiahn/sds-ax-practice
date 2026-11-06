@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "memory_chat.py 장기·단기 기억 흐름",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-memory-chat-20261106-160049/memory-chat.html"
+  },
+  "lanes": [
+    { "id": "boot", "label": "실행 시작 · 1회" },
+    { "id": "loop", "label": "대화 루프 · while" },
+    { "id": "tool", "label": "도구 실행" },
+    { "id": "store", "label": "SQLite 저장소" }
+  ],
+  "mainPath": ["name", "load", "build", "newthread", "ask", "agent"],
+  "nodes": [
+    { "id": "name", "lane": "boot", "col": 0, "type": "external", "label": "이름 입력", "sublabel": "user_name = input()", "icon": "person" },
+    { "id": "load", "lane": "boot", "col": 1, "type": "backend", "label": "load_memories()", "sublabel": "이 사용자의 기억 전부" },
+    { "id": "build", "lane": "boot", "col": 2, "type": "backend", "label": "system_prompt 구성", "sublabel": "기억 목록을 프롬프트에 삽입" },
+    { "id": "newthread", "lane": "boot", "col": 3, "type": "backend", "label": "새 thread_id", "sublabel": "이름_uuid 8자리" },
+    { "id": "finish", "lane": "loop", "col": 2, "type": "frontend", "label": "종료", "sublabel": "while 탈출", "icon": "stop" },
+    { "id": "ask", "lane": "loop", "col": 3, "type": "frontend", "label": "질문 입력", "sublabel": "나: ...", "icon": "person" },
+    { "id": "agent", "lane": "loop", "col": 4, "type": "cloud", "label": "agent.invoke()", "sublabel": "Haiku + save_memory", "tag": "AI 응답 출력" },
+    { "id": "savetool", "lane": "tool", "col": 4, "type": "messagebus", "label": "save_memory()", "sublabel": "한 문장으로 정리해 저장" },
+    { "id": "memdb", "lane": "store", "col": 1, "type": "database", "label": "memory.sqlite", "sublabel": "memories(user, memory, created)", "tag": "장기 기억" },
+    { "id": "ckpt", "lane": "store", "col": 5, "type": "database", "label": "chat_memory.sqlite", "sublabel": "thread_id별 대화 상태", "tag": "단기 기억" }
+  ],
+  "edges": [
+    { "id": "name-load", "from": "name", "to": "load", "label": "user_name", "variant": "emphasis" },
+    { "id": "memdb-load", "from": "memdb", "to": "load", "label": "SELECT", "variant": "dashed" },
+    { "id": "load-build", "from": "load", "to": "build", "label": "memories", "variant": "emphasis" },
+    { "id": "build-thread", "from": "build", "to": "newthread", "variant": "emphasis" },
+    { "id": "thread-ask", "from": "newthread", "to": "ask", "variant": "emphasis" },
+    { "id": "ask-agent", "from": "ask", "to": "agent", "label": "HumanMessage", "variant": "emphasis" },
+    { "id": "ask-finish", "from": "ask", "to": "finish", "label": "끝 · 빈 입력", "role": "branch" },
+    { "id": "agent-save", "from": "agent", "to": "savetool", "label": "기억해줘 요청 시", "role": "branch" },
+    { "id": "save-memdb", "from": "savetool", "to": "memdb", "label": "INSERT", "variant": "dashed" },
+    { "id": "agent-ckpt", "from": "agent", "to": "ckpt", "label": "대화 저장 · 복원", "variant": "dashed" },
+    { "id": "agent-ask", "from": "agent", "to": "ask", "label": "다음 질문", "role": "return", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "기억이 두 종류",
+      "items": [
+        "장기: memory.sqlite · 사용자 이름별 · 실행이 바뀌어도 유지 · 시스템 프롬프트로 주입",
+        "단기: chat_memory.sqlite · thread_id별 대화 원문 · 실행마다 새 uuid라 이어지지 않음"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "읽을 때 주의",
+      "items": [
+        "시스템 프롬프트는 시작할 때 한 번만 만듦 (L42-44, L58-62)",
+        "이번 실행에서 저장한 기억은 다음 실행부터 프롬프트에 들어감",
+        "같은 실행 안에서는 대화 기록(단기 기억)으로 이미 알고 있음",
+        "언제 저장할지는 모델이 save_memory의 docstring을 보고 판단"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "코드 위치",
+      "items": [
+        "load_memories: L16-21 · 테이블이 없으면 CREATE",
+        "save_memory: L25-32 · 전역 user_name으로 INSERT",
+        "thread_id: L52 · 체크포인터: L54"
+      ]
+    }
+  ]
+}

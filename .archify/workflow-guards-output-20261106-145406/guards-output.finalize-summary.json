@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\candidate.json",
+    "sha256": "bfa732db5de64159fb67c49323dadfdf097362c2d3673e8593770734d18a3cef",
+    "bytes": 4659
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\guards-output.html",
+    "sha256": "8c04d144d79cd2565c0f0bffba9aeaf2bd2164ae6b2b95afbf313a149757eb15",
+    "bytes": 853067
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\guards-output.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\guards-output.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\guards-output.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T05:11:00.765Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4087,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

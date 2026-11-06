@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-memory-chat-20261106-160049\\candidate.json",
+    "sha256": "9ee118c9336a4e79ac7080ce877c66071ed035281255de6ea0edb403a5b4ae4f",
+    "bytes": 4316
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-memory-chat-20261106-160049\\memory-chat.html",
+    "sha256": "d4066e76101344cff4319d3c4e48d8fab039f08c56d871ba3827abe5011bd9df",
+    "bytes": 852316
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-memory-chat-20261106-160049\\memory-chat.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-memory-chat-20261106-160049\\memory-chat.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-memory-chat-20261106-160049\\memory-chat.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T05:11:00.765Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4232,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

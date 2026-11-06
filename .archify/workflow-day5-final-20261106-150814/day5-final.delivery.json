@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "26e351fd-eb04-401a-8dee-82ec53ffa275",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-day5-final-20261106-150814\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-day5-final-20261106-150814\\day5-final.html",
+  "specification": {
+    "sha256": "0fabb576391bccf59267e2967c7efda86bdb9807ecef3b758468a33ee21d49a5",
+    "bytes": 5131
+  },
+  "artifact": {
+    "sha256": "143fd6228680841bc1324a8b41b4836f7949081de5f0d582df16663d72b4efe9",
+    "bytes": 854916
+  }
+}

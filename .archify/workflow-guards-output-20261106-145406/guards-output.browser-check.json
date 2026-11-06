@@ -1,0 +1,1201 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "browser-check",
+  "evidenceKind": "automated-browser",
+  "status": "pass",
+  "visualReview": "not-requested",
+  "provenance": "current",
+  "deliveryReceiptId": "bfd1c1b7-15ea-44e5-a450-7484219f06b2",
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\guards-output.html",
+    "sha256": "8c04d144d79cd2565c0f0bffba9aeaf2bd2164ae6b2b95afbf313a149757eb15",
+    "bytes": 853067
+  },
+  "state": {
+    "detail": "read",
+    "motion": "still"
+  },
+  "chrome": {
+    "status": "available",
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  },
+  "diagnostics": [],
+  "containment": {
+    "status": "pass",
+    "policy": "fit-or-reader-declared-readable-vertical-scroll",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "light",
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1376,
+        "diagramWidth": 1346,
+        "pageComposition": {
+          "bodyPaddingPx": 12,
+          "headerPx": 52,
+          "diagramChromePx": 78,
+          "svgPx": 736,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 146,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 94,
+            "spaceAboveNodesPx": 47,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 146,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 94,
+            "spaceAboveNodesPx": 47,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 146,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 72,
+            "spaceAboveNodesPx": 58,
+            "spaceBelowNodesPx": 17
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "light",
+        "innerWidth": 1600,
+        "innerHeight": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1457,
+        "diagramWidth": 1427,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 780,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 155,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 99,
+            "spaceAboveNodesPx": 50,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 155,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 99,
+            "spaceAboveNodesPx": 50,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 155,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 76,
+            "spaceAboveNodesPx": 61,
+            "spaceBelowNodesPx": 18
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "theme": "light",
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1603,
+        "diagramWidth": 1573,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 860,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 171,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 109,
+            "spaceAboveNodesPx": 55,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 171,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 109,
+            "spaceAboveNodesPx": 55,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 171,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 84,
+            "spaceAboveNodesPx": 68,
+            "spaceBelowNodesPx": 19
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "theme": "light",
+        "innerWidth": 2048,
+        "innerHeight": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1920,
+        "diagramWidth": 1870,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 68,
+          "diagramChromePx": 94,
+          "svgPx": 1022,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 203,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 130,
+            "spaceAboveNodesPx": 65,
+            "spaceBelowNodesPx": 8
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 203,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 130,
+            "spaceAboveNodesPx": 65,
+            "spaceBelowNodesPx": 8
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 203,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 100,
+            "spaceAboveNodesPx": 80,
+            "spaceBelowNodesPx": 23
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 44,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      }
+    ]
+  },
+  "themeStates": {
+    "status": "pass",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "requestedTheme": "light",
+        "resolvedTheme": "light",
+        "ok": true
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "requestedTheme": "light",
+        "resolvedTheme": "light",
+        "ok": true
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "requestedTheme": "light",
+        "resolvedTheme": "light",
+        "ok": true
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "requestedTheme": "light",
+        "resolvedTheme": "light",
+        "ok": true
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "requestedTheme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "requestedTheme": "dark",
+        "resolvedTheme": "dark",
+        "ok": true
+      }
+    ]
+  },
+  "readability": {
+    "status": "pass",
+    "minimumProjectedNodeTextPx": 6,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "light",
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1376,
+        "diagramWidth": 1346,
+        "pageComposition": {
+          "bodyPaddingPx": 12,
+          "headerPx": 52,
+          "diagramChromePx": 78,
+          "svgPx": 736,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 146,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 94,
+            "spaceAboveNodesPx": 47,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 146,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 94,
+            "spaceAboveNodesPx": 47,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 146,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 72,
+            "spaceAboveNodesPx": 58,
+            "spaceBelowNodesPx": 17
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "light",
+        "innerWidth": 1600,
+        "innerHeight": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1457,
+        "diagramWidth": 1427,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 780,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 155,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 99,
+            "spaceAboveNodesPx": 50,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 155,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 99,
+            "spaceAboveNodesPx": 50,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 155,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 76,
+            "spaceAboveNodesPx": 61,
+            "spaceBelowNodesPx": 18
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "theme": "light",
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1603,
+        "diagramWidth": 1573,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 860,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 171,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 109,
+            "spaceAboveNodesPx": 55,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 171,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 109,
+            "spaceAboveNodesPx": 55,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 171,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 84,
+            "spaceAboveNodesPx": 68,
+            "spaceBelowNodesPx": 19
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "theme": "light",
+        "innerWidth": 2048,
+        "innerHeight": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1920,
+        "diagramWidth": 1870,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 68,
+          "diagramChromePx": 94,
+          "svgPx": 1022,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 203,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 130,
+            "spaceAboveNodesPx": 65,
+            "spaceBelowNodesPx": 8
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 203,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 130,
+            "spaceAboveNodesPx": 65,
+            "spaceBelowNodesPx": 8
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 203,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 100,
+            "spaceAboveNodesPx": 80,
+            "spaceBelowNodesPx": 23
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 44,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      }
+    ]
+  },
+  "viewerChrome": {
+    "status": "pass",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "light",
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1376,
+        "diagramWidth": 1346,
+        "pageComposition": {
+          "bodyPaddingPx": 12,
+          "headerPx": 52,
+          "diagramChromePx": 78,
+          "svgPx": 736,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 146,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 94,
+            "spaceAboveNodesPx": 47,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 146,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 94,
+            "spaceAboveNodesPx": 47,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 146,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 72,
+            "spaceAboveNodesPx": 58,
+            "spaceBelowNodesPx": 17
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "light",
+        "innerWidth": 1600,
+        "innerHeight": 1000,
+        "scrollWidth": 1600,
+        "scrollHeight": 1000,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1457,
+        "diagramWidth": 1427,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 780,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 155,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 99,
+            "spaceAboveNodesPx": 50,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 155,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 99,
+            "spaceAboveNodesPx": 50,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 155,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 76,
+            "spaceAboveNodesPx": 61,
+            "spaceBelowNodesPx": 18
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "theme": "light",
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1603,
+        "diagramWidth": 1573,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 860,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 171,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 109,
+            "spaceAboveNodesPx": 55,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 171,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 109,
+            "spaceAboveNodesPx": 55,
+            "spaceBelowNodesPx": 6
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 171,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 84,
+            "spaceAboveNodesPx": 68,
+            "spaceBelowNodesPx": 19
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "theme": "light",
+        "innerWidth": 2048,
+        "innerHeight": 1320,
+        "scrollWidth": 2048,
+        "scrollHeight": 1320,
+        "overflowX": false,
+        "overflowY": false,
+        "verticalScrollAccepted": false,
+        "overflowDisposition": "contained",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": null,
+        "ok": true,
+        "readerWidth": 1920,
+        "diagramWidth": 1870,
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 68,
+          "diagramChromePx": 94,
+          "svgPx": 1022,
+          "cardsPx": 0,
+          "viewBoxHeight": 534
+        },
+        "viewBoxWidth": 977,
+        "workflowLanes": [
+          {
+            "frameId": "lane-0",
+            "heightPx": 203,
+            "nodeCount": 2,
+            "nodeIds": [
+              "model",
+              "toolsnode"
+            ],
+            "nodeSpanPx": 130,
+            "spaceAboveNodesPx": 65,
+            "spaceBelowNodesPx": 8
+          },
+          {
+            "frameId": "lane-1",
+            "heightPx": 203,
+            "nodeCount": 5,
+            "nodeIds": [
+              "precheck",
+              "pii",
+              "offtopic",
+              "grounding",
+              "final"
+            ],
+            "nodeSpanPx": 130,
+            "spaceAboveNodesPx": 65,
+            "spaceBelowNodesPx": 8
+          },
+          {
+            "frameId": "lane-2",
+            "heightPx": 203,
+            "nodeCount": 3,
+            "nodeIds": [
+              "mask",
+              "fixed",
+              "append"
+            ],
+            "nodeSpanPx": 100,
+            "spaceAboveNodesPx": 80,
+            "spaceBelowNodesPx": 23
+          }
+        ],
+        "minimumProjectedNodeTextPx": 6.4,
+        "minimumProjectedNonEdgeTextPx": 6.4,
+        "minimumProjectedEdgeTextPx": 8,
+        "minimumProjectedNodeText": "원문 + 담당 부서 확인 안내",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "append"
+        },
+        "minimumRequiredNodeTextPx": 6,
+        "readabilityOk": true,
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "requiredDockStageGap": 10,
+        "viewerChromeStageOk": true,
+        "viewerChromeReserve": 44,
+        "viewerChromeActive": true,
+        "viewerChromeOk": true,
+        "resolvedTheme": "light"
+      }
+    ]
+  },
+  "captures": {
+    "status": "not-requested",
+    "screenshots": [],
+    "contactSheet": null
+  },
+  "sidecars": {
+    "receipt": "guards-output.browser-check.json",
+    "files": []
+  }
+}

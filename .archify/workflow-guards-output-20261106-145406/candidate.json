@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "guards_output.py 출력 가드레일",
+    "locale": "ko",
+    "quality_profile": "showcase",
+    "output": ".archify/workflow-guards-output-20261106-145406/guards-output.html"
+  },
+  "lanes": [
+    { "id": "agent", "label": "에이전트 루프" },
+    { "id": "guard", "label": "after_model 검사" },
+    { "id": "rewrite", "label": "응답 교체 (같은 id)", "variant": "exception" }
+  ],
+  "mainPath": ["model", "precheck", "pii", "offtopic", "grounding", "final"],
+  "nodes": [
+    { "id": "model", "lane": "agent", "col": 0, "type": "cloud", "label": "model 노드", "sublabel": "Haiku · temperature=0", "tag": "AIMessage 생성" },
+    { "id": "toolsnode", "lane": "agent", "col": 2, "type": "messagebus", "label": "tools 노드", "sublabel": "lookup_employee 실행", "tag": "더미 PII 반환" },
+    { "id": "precheck", "lane": "guard", "col": 1, "type": "security", "label": "사전 확인", "sublabel": "빈 응답 · tool_calls면 None", "icon": "decision" },
+    { "id": "pii", "lane": "guard", "col": 2, "type": "security", "label": "1. has_pii()", "sublabel": "사번 · 전화 · 이메일 정규식", "icon": "decision" },
+    { "id": "offtopic", "lane": "guard", "col": 3, "type": "security", "label": "2. is_off_topic()", "sublabel": "FORBIDDEN_TOPICS 4개", "icon": "decision" },
+    { "id": "grounding", "lane": "guard", "col": 4, "type": "cloud", "label": "3. check_grounding()", "sublabel": "GroundingCheck 구조화 출력", "tag": "예외 시 통과" },
+    { "id": "final", "lane": "guard", "col": 5, "type": "frontend", "label": "최종 응답", "sublabel": "사용자에게 반환", "icon": "success" },
+    { "id": "mask", "lane": "rewrite", "col": 2, "type": "backend", "label": "mask_pii()", "sublabel": "[MASKED_EMP_ID] 등으로 치환" },
+    { "id": "fixed", "lane": "rewrite", "col": 3, "type": "backend", "label": "고정 문구로 대체", "sublabel": "담당 범위가 아닙니다", "icon": "stop" },
+    { "id": "append", "lane": "rewrite", "col": 4, "type": "backend", "label": "확인 안내 덧붙임", "sublabel": "원문 + 담당 부서 확인 안내" }
+  ],
+  "edges": [
+    { "id": "model-precheck", "from": "model", "to": "precheck", "label": "AIMessage" },
+    { "id": "precheck-tools", "from": "precheck", "to": "toolsnode", "label": "tool_calls", "variant": "dashed", "role": "branch" },
+    { "id": "tools-model", "from": "toolsnode", "to": "model", "label": "ToolMessage", "variant": "dashed", "role": "return" },
+    { "id": "precheck-pii", "from": "precheck", "to": "pii", "label": "최종 텍스트", "variant": "emphasis" },
+    { "id": "pii-mask", "from": "pii", "to": "mask", "label": "발견", "variant": "security", "role": "branch" },
+    { "id": "pii-offtopic", "from": "pii", "to": "offtopic", "label": "없음", "variant": "emphasis" },
+    { "id": "offtopic-fixed", "from": "offtopic", "to": "fixed", "label": "금지 주제", "variant": "security", "role": "branch" },
+    { "id": "offtopic-grounding", "from": "offtopic", "to": "grounding", "label": "없음", "variant": "emphasis" },
+    { "id": "grounding-append", "from": "grounding", "to": "append", "label": "근거 없음", "variant": "security", "role": "branch" },
+    { "id": "grounding-final", "from": "grounding", "to": "final", "label": "None", "variant": "emphasis" },
+    { "id": "mask-final", "from": "mask", "to": "final", "variant": "dashed" },
+    { "id": "fixed-final", "from": "fixed", "to": "final", "variant": "dashed" },
+    { "id": "append-final", "from": "append", "to": "final", "label": "교체" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "실제 실행 결과",
+      "items": [
+        "\"김하늘 연락처 알려줘\" → 도구 결과의 사번·이메일·전화가 [MASKED_*]로 치환",
+        "\"머리가 아픈데 의료 진단해줘\" → 응답 문장에 금지 주제가 있어 고정 문구로 대체"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "읽는 법",
+      "items": [
+        "세 검사는 순서대로, 처음 걸린 곳에서 return (L81-100)",
+        "교체 메시지는 id=last.id라 원래 답변 자리를 덮어씀",
+        "입력이 아니라 모델이 만든 출력 텍스트를 검사"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "설계 포인트",
+      "items": [
+        "tool_calls 응답을 교체하면 도구 호출이 사라지므로 건너뜀 (L75)",
+        "PII가 있으면 범위 이탈 · 단정 검사는 실행되지 않음",
+        "check_grounding 예외는 로그 후 통과 = fail-open (L101-102)"
+      ]
+    }
+  ]
+}

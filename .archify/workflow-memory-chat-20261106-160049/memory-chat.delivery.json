@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "c05d56fe-31c7-44a8-910d-9b1ce38ed1f6",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-memory-chat-20261106-160049\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-memory-chat-20261106-160049\\memory-chat.html",
+  "specification": {
+    "sha256": "9ee118c9336a4e79ac7080ce877c66071ed035281255de6ea0edb403a5b4ae4f",
+    "bytes": 4316
+  },
+  "artifact": {
+    "sha256": "d4066e76101344cff4319d3c4e48d8fab039f08c56d871ba3827abe5011bd9df",
+    "bytes": 852316
+  }
+}

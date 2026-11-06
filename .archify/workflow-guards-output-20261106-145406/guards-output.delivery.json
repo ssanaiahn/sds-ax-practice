@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "bfd1c1b7-15ea-44e5-a450-7484219f06b2",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\candidate.json",
+  "output": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-guards-output-20261106-145406\\guards-output.html",
+  "specification": {
+    "sha256": "bfa732db5de64159fb67c49323dadfdf097362c2d3673e8593770734d18a3cef",
+    "bytes": 4659
+  },
+  "artifact": {
+    "sha256": "8c04d144d79cd2565c0f0bffba9aeaf2bd2164ae6b2b95afbf313a149757eb15",
+    "bytes": 853067
+  }
+}

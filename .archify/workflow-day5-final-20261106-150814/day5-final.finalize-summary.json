@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "workflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-day5-final-20261106-150814\\candidate.json",
+    "sha256": "0fabb576391bccf59267e2967c7efda86bdb9807ecef3b758468a33ee21d49a5",
+    "bytes": 5131
+  },
+  "artifact": {
+    "path": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-day5-final-20261106-150814\\day5-final.html",
+    "sha256": "143fd6228680841bc1324a8b41b4836f7949081de5f0d582df16663d72b4efe9",
+    "bytes": 854916
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-day5-final-20261106-150814\\day5-final.finalize.json",
+    "summaryReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-day5-final-20261106-150814\\day5-final.finalize-summary.json",
+    "browserCheckReceipt": "C:\\Users\\Admin\\Desktop\\SDS-AX-PRACTICE\\.archify\\workflow-day5-final-20261106-150814\\day5-final.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-06T05:11:00.765Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4098,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}
